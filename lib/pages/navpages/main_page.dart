@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travel_application/misc/colors.dart';
-import 'package:travel_application/pages/navpages/home_page.dart';
+import 'package:travel_application/pages/home_page.dart';
 import 'package:travel_application/pages/navpages/my_page.dart';
 import 'package:travel_application/pages/navpages/search_page.dart';
 import 'package:travel_application/pages/navpages/bar_item_page.dart';
