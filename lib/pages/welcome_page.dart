@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:travel_application/cubit/app_cubits.dart';
 import 'package:travel_application/misc/colors.dart';
 import 'package:travel_application/widgets/app_large_text.dart';
 import 'package:travel_application/widgets/app_text.dart';
@@ -52,7 +54,7 @@ class _WelcomePageState extends State<WelcomePage> {
                       children: [
                         const AppLargeText(text: "Trips"),
                         const AppText(text: "Mountain", size: 30),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         Container(
@@ -63,10 +65,22 @@ class _WelcomePageState extends State<WelcomePage> {
                             size: 14,
                           )
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
-                        ResponsiveButton(width: 120,)
+                        GestureDetector(
+                          onTap: (){
+                            BlocProvider.of<AppCubits>(context).getData();
+                          },
+                          child: Container(
+                            width: 200,
+                              child: Row(
+                                children: [
+                                  ResponsiveButton(width: 120,),
+                                ],
+                              )
+                          ),
+                        )
                       ],
                     ), // Column for Main Display
 
